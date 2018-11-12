@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.0"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = "ClientMainKt"
+
+sourceSets {
+    main.kotlin.srcDirs = [ 'src' ]
+}
+
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.0"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:3.10.0"
+}
